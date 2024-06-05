@@ -6,8 +6,8 @@ WORKDIR /repo
 
 RUN git clone https://github.com/MystenLabs/sui.git /repo && \
   cd /repo && \
-  git fetch origin 0492b6bb2869794fe1dbc150729c2ae4c34d8b8a && \
-  git checkout 0492b6bb2869794fe1dbc150729c2ae4c34d8b8a
+  git fetch origin 7a29f1246f5ebb4d642de451c600f63157562545 && \
+  git checkout 7a29f1246f5ebb4d642de451c600f63157562545
 
 RUN cargo build --release --bin sui-bridge
 
