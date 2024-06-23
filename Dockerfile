@@ -4,10 +4,11 @@ RUN apt-get update && apt-get install -y cmake clang
 
 WORKDIR /repo
 
+# When updating commit, update it both in `fetch origin` and `checkout` command
 RUN git clone https://github.com/MystenLabs/sui.git /repo && \
   cd /repo && \
-  git fetch origin 7a29f1246f5ebb4d642de451c600f63157562545 && \
-  git checkout 414f9fb218ae410fa0c414ef6823965536dd0e4f
+  git fetch origin 9254fba702bf111d34424f55dc5c3ee0506bc4e1 && \
+  git checkout 9254fba702bf111d34424f55dc5c3ee0506bc4e1
 
 RUN cargo build --release --bin sui-bridge
 
